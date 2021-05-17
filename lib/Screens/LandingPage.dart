@@ -44,7 +44,7 @@ class _LandingPageState extends State<LandingPage> {
         child: Container(
           height: _height,
           width: _width,
-          child: ListView.builder(
+          child:isLoading ?Center(child: CircularProgressIndicator()): ListView.builder(
             itemCount: category.length,
             itemBuilder: (context, index) {
               int id = index ;
